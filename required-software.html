@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FRC Coding Camp – Required Software</title>
+    <meta name="description" content="Software setup instructions for the CyBears FRC Java Coding Camp." />
+    <link rel="icon" href="data:," />
+    <style>
+        :root {
+            --bg: #0b1020;
+            --panel: #111833;
+            --ink: #e8ecff;
+            --muted: #c9cff6;
+            --accent: #7aa2ff;
+            --line: #22305c;
+            --ok: #9ae6b4;
+            --warn: #fbd38d;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+            color: var(--ink);
+            background: linear-gradient(180deg, #060a17 0%, #0b1020 40%, #0e1430 100%)
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
+
+        header {
+            padding: 64px 16px 32px;
+            border-bottom: 1px solid var(--line);
+            background: radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%)
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: .3px
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: clamp(28px, 5vw, 40px);
+            margin: 12px 0 8px
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: clamp(16px, 2.8vw, 18px)
+        }
+
+        nav {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            text-decoration: none;
+            background: rgba(255, 255, 255, .02)
+        }
+
+        main {
+            padding: 40px 0 80px
+        }
+
+        section {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 0;
+            color: var(--ok)
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        ul,
+        ol {
+            margin: 8px 0 0 22px;
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        .note {
+            border-left: 4px solid var(--accent);
+            padding: 10px 12px;
+            background: rgba(122, 162, 255, .08);
+            border-radius: 10px;
+            margin: 12px 0
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 24px 0;
+            color: var(--muted)
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <span class="badge">Team 4682 CyBears • Bishop Blanchet High School</span>
+            <h1>FRC Coding Camp – Required Software</h1>
+            <p class="lead">Follow these steps to install and configure all software required for the CyBears FRC Java
+                Coding Camp.</p>
+
+            <nav aria-label="Navigation">
+                <a href="index.html">← Back to Main Site</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The software is supported on both Mac and Windows.</p>
+        </section>
+
+        <section id="github">
+            <h2>Step 1 – Create a GitHub Account</h2>
+            <p>If you don't already have a GitHub account, create one at:
+                <a href="https://github.com/signup" target="_blank" rel="noopener">https://github.com/signup</a>.
+            </p>
+            <p><strong>Note:</strong> If you configure two-factor authentication (2FA), make sure it’s tied to a phone
+                or email you can regularly access.</p>
+        </section>
+
+        <section id="software">
+            <h2>Step 2 – Install Required Software</h2>
+            <p>Two main software installations are required:</p>
+
+            <ol>
+                <li>
+                    <strong>GitHub Desktop</strong><br>
+                    Follow <a
+                        href="https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop#part-1-installing-and-authenticating"
+                        target="_blank" rel="noopener">
+                        Step 1 of the GitHub Desktop Getting Started guide</a> to install and authenticate GitHub
+                    Desktop to your GitHub account.<br>
+                    You only need to complete <em>“Part 1: Installing and authenticating.”</em>
+                </li>
+                <li style="margin-top:12px;">
+                    <strong>WPILib and VS Code</strong><br>
+                    Install from:
+                    <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html#"
+                        target="_blank" rel="noopener">
+                        WPILib Installation Guide
+                    </a>.
+                    <p>VS Code is the main programming environment we will use. WPILib is the code library used for FRC.
+                        The WPILib installer includes VS Code automatically.</p>
+                    <p>There are several supported languages. This course uses <strong>Java</strong>, so you <strong>do
+                            not</strong> need to complete the “Additional C++ Installation for Simulation” step.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="vscode">
+            <h2>Special Note About VS Code</h2>
+            <p>If you already have VS Code installed, you <strong>cannot</strong> use that version for FRC. You must use
+                the version that comes with WPILib.</p>
+
+            <div class="note">
+                <ul>
+                    <li>You can install the WPILib version alongside your existing VS Code, but you must know which one
+                        to run.</li>
+                    <li>If you’re not confident identifying the right version, uninstall your existing VS Code first and
+                        then install WPILib’s version. That will leave you with only the FRC-compatible one.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="next">
+            <h2>Next Steps</h2>
+            <p>After installation:</p>
+            <ul>
+                <li>Confirm you can launch GitHub Desktop and sign in.</li>
+                <li>Open the WPILib version of VS Code to verify it starts correctly.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2025 Josephine Bolotski</p>
+        </div>
+    </footer>
+</body>
+
+</html>

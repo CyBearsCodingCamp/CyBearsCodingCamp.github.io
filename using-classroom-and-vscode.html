@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Using GitHub Classroom and VS Code – CyBears FRC Coding Camp</title>
+  <meta name="description"
+    content="Step-by-step guide with screenshots: accept GitHub Classroom assignments, open in GitHub Desktop, and work in the WPILib version of VS Code." />
+  <link rel="icon" href="data:," />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111833;
+      --ink: #e8ecff;
+      --muted: #c9cff6;
+      --accent: #7aa2ff;
+      --line: #22305c;
+      --ok: #9ae6b4;
+      --warn: #fbd38d;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #060a17 0%, #0b1020 40%, #0e1430 100%)
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    header {
+      padding: 64px 16px 32px;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%)
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 16px
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .3px
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 40px);
+      margin: 12px 0 8px
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2.8vw, 18px)
+    }
+
+    nav {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, .02)
+    }
+
+    main {
+      padding: 40px 0 80px
+    }
+
+    section {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 0;
+      color: var(--ok)
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      background: rgba(122, 162, 255, .08);
+      border-radius: 10px;
+      margin: 12px 0
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      color: var(--muted)
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+    }
+
+    /* Interleaved layout */
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .row {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px
+    }
+
+    .row .text h3 {
+      margin: 0 0 6px;
+      font-size: 18px
+    }
+
+    .row .media img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid var(--line)
+    }
+
+    @media (min-width: 860px) {
+      .row {
+        grid-template-columns: 1.1fr 1fr
+      }
+
+      .row.alt {
+        grid-template-columns: 1fr 1.1fr
+      }
+
+      .row.alt .text {
+        order: 2
+      }
+
+      .row.alt .media {
+        order: 1
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <span class="badge">Team 4682 CyBears • Bishop Blanchet High School</span>
+      <h1>Using GitHub Classroom and VS Code</h1>
+      <p class="lead">Accept the assignment, clone with GitHub Desktop, and work in the WPILib version of VS Code — with
+        screenshots for every step.</p>
+
+      <nav aria-label="Navigation">
+        <a href="index.html">← Back to Main Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="flow">
+      <h2>Step-by-step</h2>
+      <div class="flow">
+
+        <div class="row">
+          <div class="text">
+            <h3>1) Accept the Assignment</h3>
+            <p>Open the GitHub Classroom invite for your unit and click “Accept this assignment”. Wait for GitHub to
+              create your personal repository.</p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide07_img01.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide07_img01.png" alt="Accept the Assignment" />
+            </a>
+          </div>
+        </div>
+
+
+        <div class="row alt">
+          <div class="text">
+            <h3>2) Open the Repository on GitHub</h3>
+            <p>When the repo is ready, click its link. You’ll land on your assignment repository on GitHub’s website.
+            </p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide08_img01.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide08_img01.png" alt="Open the Repository on GitHub" />
+            </a>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="text">
+            <h3>3) Open in GitHub Desktop</h3>
+            <p>On GitHub, click the green <span class='mono'>Code</span> button → choose <span class='mono'>Open with
+                GitHub Desktop</span> (or copy the URL and use <span class='mono'>File → Clone Repository…</span> in
+              GitHub Desktop).</p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide09_img01.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide09_img01.png" alt="Open in GitHub Desktop" />
+            </a>
+          </div>
+        </div>
+
+
+        <div class="row alt">
+          <div class="text">
+            <h3>4) Open in VS Code from GitHub Desktop</h3>
+            <p>In GitHub Desktop, choose <span class='mono'>Repository → Open in Visual Studio Code</span>.</p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide10_img01.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide10_img01.png" alt="Open in VS Code from GitHub Desktop" />
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="text">
+            <h3>Alternate Method Step 1) Find the folder in GitHub Desktop</h3>
+            <p>In GitHub Desktop, choose Repository → Show in Finder.</p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide11_img01.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide11_img01.png" alt="Confirm VS Code Opens the Repo" />
+            </a>
+          </div>
+        </div>
+
+
+        <div class="row alt">
+          <div class="text">
+            <h3>Alternate Method Step 2) Open the folder in VS Code</h3>
+            <p>In VS Code, choose File → Open Folder. Navigate to the folder you found above.</p>
+          </div>
+          <div class="media">
+            <a href="assets/classroom-vscode/slide11_img02.png" target="_blank" rel="noopener">
+              <img src="assets/classroom-vscode/slide11_img02.png" alt="Use the WPILib VS Code" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="note">
+        <h3>5) Confirm VS Code Opens the Repo</h3>
+        <p>VS Code should open directly to your cloned repository folder. If prompted, trust the authors and install
+          recommended extensions.</p>
+      </div>
+
+      </div>
+      <div class="note">
+        <h3>6) Use the WPILib VS Code</h3>
+        <p>Make sure you are running the VS Code that came with the WPILib installer (not a previously-installed
+          version).</p>
+      </div>
+
+      <div class="row">
+        <div class="text">
+          <h3>7) View Getting Started / Instructions</h3>
+          <p>In the Explorer, open the unit’s instructions file (e.g., <span
+              class='mono'>Unit_1_1/Instructions.md</span>). Right-click and choose <span class='mono'>Open
+              Preview</span> or press <span class='mono'>Shift+Ctrl+V</span> (Windows/Linux) or <span
+              class='mono'>Shift+Cmd+V</span> (macOS).</p>
+        </div>
+        <div class="media">
+          <a href="assets/classroom-vscode/slide12_img01.png" target="_blank" rel="noopener">
+            <img src="assets/classroom-vscode/slide12_img01.png" alt="View Getting Started / Instructions" />
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row alt">
+        <div class="text">
+          <h3>8) Find Your Repositories Later</h3>
+          <p>You can always find your Classroom repositories on your GitHub profile under <span
+              class='mono'>Repositories</span>, at <a href="http://github.com/CyBearsCodingCamp">
+              http://github.com/CyBearsCodingCamp </a>, or in GitHub Desktop under <span class='mono'>File → Open
+              Recent</span>.</p>
+        </div>
+        <div class="media">
+          <a href="assets/classroom-vscode/slide13_img01.png" target="_blank" rel="noopener">
+            <img src="assets/classroom-vscode/slide13_img01.png" alt="Find Your Repositories Later" />
+          </a>
+        </div>
+      </div>
+
+      </div>
+      <div class="note"><strong>Having trouble?</strong> Double-check you installed the WPILib bundle and that GitHub
+        Desktop is authenticated to your GitHub account.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 Josephine Bolotski</p>
+    </div>
+  </footer>
+</body>
+
+</html>

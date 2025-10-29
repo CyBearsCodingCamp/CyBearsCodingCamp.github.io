@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CyBears Java Coding for FRC</title>
+    <meta name="description"
+        content="CyBears Java Coding for FIRST Robotics Competition (FRC) — hands-on curriculum with GitHub Classroom and VS Code." />
+    <link rel="icon" href="data:," />
+    <style>
+        :root {
+            --bg: #0b1020;
+            --panel: #111833;
+            --ink: #e8ecff;
+            --muted: #c9cff6;
+            --accent: #7aa2ff;
+            --line: #22305c;
+            --ok: #9ae6b4;
+            --warn: #fbd38d;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+            color: var(--ink);
+            background: linear-gradient(180deg, #060a17 0%, #0b1020 40%, #0e1430 100%)
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
+
+        header {
+            padding: 64px 16px 32px;
+            border-bottom: 1px solid var(--line);
+            background: radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%)
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 16px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: .3px
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: clamp(28px, 5vw, 40px);
+            margin: 12px 0 8px
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: clamp(16px, 2.8vw, 18px)
+        }
+
+        nav {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            text-decoration: none
+        }
+
+        main {
+            padding: 32px 0 64px
+        }
+
+        section {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px 0
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 0 0 8px
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 8px 0
+        }
+
+        ul {
+            margin: 8px 0 0 20px;
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px
+        }
+
+        @media(min-width:860px) {
+            .grid.cols-2 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px
+        }
+
+        .steps ol {
+            margin: 8px 0 0 22px;
+            line-height: 1.6;
+            color: var(--muted)
+        }
+
+        .note {
+            border-left: 4px solid var(--accent);
+            padding: 10px 12px;
+            background: rgba(122, 162, 255, .08);
+            border-radius: 10px
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 24px 0;
+            color: var(--muted)
+        }
+
+        .kicker {
+            color: var(--ok);
+            font-weight: 600;
+            letter-spacing: .2px
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <span class="badge">Team 4682 CyBears • Bishop Blanchet High School</span>
+            <h1>CyBears Java Coding for FRC</h1>
+            <p class="lead">Hands-on Java programming for robotics applications in the FIRST Robotics Competition (FRC).
+                Sponsored by the CyBears Team 4682.</p>
+            <nav aria-label="Sections">
+                <a href="#about">About</a>
+                <a href="#software">Required Software</a>
+                <a href="#assignments">GitHub Classroom</a>
+                <a href="#get-started">Get Started</a>
+                <a href="#git">Check In Code</a>
+                <a href="#help">Getting Help</a>
+                <a href="#license">License</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section id="about">
+            <h2>About the Curriculum</h2>
+            <div class="card">
+                <p><span class="kicker">Objective:</span> Teach Java programming skills specifically for robotics
+                    applications in FRC.</p>
+                <p><span class="kicker">Format:</span> Hands-on coding sessions and projects.</p>
+                <p><span class="kicker">What You’ll Learn:</span> Basic to intermediate Java and core robotics
+                    programming concepts.</p>
+            </div>
+        </section>
+
+        <section id="software">
+            <h2>Required Software</h2>
+            <p>Follow these directions to install the required software:</p>
+            <ul>
+                <li><a href="required-software.html">Required Software Instructions</a></li>
+            </ul>
+        </section>
+
+        <section id="assignments">
+            <h2>GitHub Classroom Assignment Links</h2>
+            <p>Accept the assignments directly from these links:</p>
+
+            <div class="grid cols-2" style="margin-top:12px">
+                <div class="card">
+                    <h3>Unit 1</h3>
+                    <p><a href="https://classroom.github.com/a/R3hbPREG" target="_blank" rel="noopener">
+                            Input, Variables, and Strings
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <h3>Unit 2</h3>
+                    <p><a href="https://classroom.github.com/a/LzwaTPeL" target="_blank" rel="noopener">
+                            Types and Operators
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <h3>Unit 3</h3>
+                    <p><a href="https://classroom.github.com/a/38ksILtW" target="_blank" rel="noopener">
+                            Conditionals
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <h3>Unit 4</h3>
+                    <p><a href="https://classroom.github.com/a/xkV9cbAo" target="_blank" rel="noopener">
+                            Methods
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <h3>Unit 5</h3>
+                    <p><a href="https://classroom.github.com/a/3RYuxgb8" target="_blank" rel="noopener">
+                            Classes and MyRobot
+                        </a></p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;color:var(--muted);">
+                Each unit corresponds to one GitHub Classroom repository.
+                After accepting the link, open your repository in GitHub Desktop and then in VS Code to begin.
+            </p>
+        </section>
+
+        <section id="get-started">
+            <h2>Using VS Code</h2>
+            <p class="note">The instructions will walk you through using GitHub Classroom and VS Code and running the
+                starter code.</p>
+            <a href="using-classroom-and-vscode.html">Using GitHub Classroom and VS Code</a>
+        </section>
+
+        <section id="git">
+            <h2>Checking In Code to GitHub</h2>
+            <p class="note">The instructions will walk you through checking your code to GitHub.</p>
+            <a href="checking-in-code.html">Using GitHub Classroom and VS Code</a>
+        </section>
+
+        <section id="help">
+            <h2>Getting Help</h2>
+            <ol>
+                <li><strong>Search the web</strong> for any exact error message (many issues come from VS Code, GitHub
+                    Desktop, or GitHub Classroom tooling).</li>
+                <li>Ask your team mentor or a more senior coder.</li>
+                <li>Email <a href="mailto:josieammer@gmail.com">josieammer@gmail.com</a> (last resort).</li>
+            </ol>
+        </section>
+
+        <section id="license">
+            <h2>License</h2>
+            <p>Copyright (c) 2025 Josephine Bolotski</p>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                associated documentation files (the “Software”), to deal in the Software without restriction, including
+                without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+                following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial
+                portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+                NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2025 Josephine Bolotski</p>
+        </div>
+    </footer>
+</body>
+
+</html>
