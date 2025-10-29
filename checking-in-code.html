@@ -1,47 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Checking In Code to GitHub – CyBears FRC Coding Camp</title>
-  <meta name="description" content="Make a commit, push to GitHub, and verify your changes — with screenshots and clear, student-friendly steps." />
+  <meta name="description"
+    content="Make a commit, push to GitHub, and verify your changes — with screenshots and clear, student-friendly steps." />
   <link rel="icon" href="data:," />
   <style>
-    :root{
-      --bg:#0b1020; --panel:#111833; --ink:#e8ecff; --muted:#c9cff6; --accent:#7aa2ff; --line:#22305c;
-      --ok:#9ae6b4; --warn:#fbd38d;
+    :root {
+      --bg: #0b1020;
+      --panel: #111833;
+      --ink: #e8ecff;
+      --muted: #c9cff6;
+      --accent: #7aa2ff;
+      --line: #22305c;
+      --ok: #9ae6b4;
+      --warn: #fbd38d;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#060a17 0%, #0b1020 40%, #0e1430 100%)}
-    a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
-    header{padding:64px 16px 32px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%)}
-    .wrap{max-width:1000px;margin:0 auto;padding:0 16px}
-    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px}
-    h1{font-weight:800;font-size:clamp(28px,5vw,40px);margin:12px 0 8px}
-    .lead{color:var(--muted);font-size:clamp(16px,2.8vw,18px)}
-    nav{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
-    nav a{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:rgba(255,255,255,.02)}
-    main{padding:40px 0 80px}
-    section{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:16px;padding:24px;margin:20px 0}
-    h2{font-size:22px;margin-top:0;color:var(--ok)}
-    p{color:var(--muted);line-height:1.6}
-    ul{color:var(--muted);line-height:1.6}
-    .note{border-left:4px solid var(--accent);padding:10px 12px;background:rgba(122,162,255,.08);border-radius:10px;margin:12px 0}
-    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted)}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-    .flow{display:flex;flex-direction:column;gap:18px}
-    .row{display:grid;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-    .row .text h3{margin:0 0 6px;font-size:18px}
-    .row .media img{width:100%;height:auto;border-radius:10px;display:block;border:1px solid var(--line)}
-    @media (min-width: 860px){ .row{grid-template-columns:1.1fr 1fr} .row.alt{grid-template-columns:1fr 1.1fr} .row.alt .text{order:2} .row.alt .media{order:1} }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #060a17 0%, #0b1020 40%, #0e1430 100%)
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    header {
+      padding: 64px 16px 32px;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%)
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 16px
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .3px
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 40px);
+      margin: 12px 0 8px
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2.8vw, 18px)
+    }
+
+    nav {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, .02)
+    }
+
+    main {
+      padding: 40px 0 80px
+    }
+
+    section {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 0;
+      color: var(--ok)
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    ul {
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      background: rgba(122, 162, 255, .08);
+      border-radius: 10px;
+      margin: 12px 0
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      color: var(--muted)
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+    }
+
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .row {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px
+    }
+
+    .row .text h3 {
+      margin: 0 0 6px;
+      font-size: 18px
+    }
+
+    .row .media img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid var(--line)
+    }
+
+    @media (min-width: 860px) {
+      .row {
+        grid-template-columns: 1.1fr 1fr
+      }
+
+      .row.alt {
+        grid-template-columns: 1fr 1.1fr
+      }
+
+      .row.alt .text {
+        order: 2
+      }
+
+      .row.alt .media {
+        order: 1
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap">
       <span class="badge">Team 4682 CyBears • Bishop Blanchet High School</span>
       <h1>Checking In Code to GitHub</h1>
-      <p class="lead">Commit locally, push to GitHub.com, and verify — the core workflow for saving and sharing your code.</p>
+      <p class="lead">Commit locally, push to GitHub.com, and verify — the core workflow for saving and sharing your
+        code.</p>
 
       <nav aria-label="Navigation">
         <a href="index.html">← Back to Main Site</a>
@@ -53,55 +199,59 @@
     <section id="flow">
       <h2>Steps</h2>
       <div class="flow">
-        
-<div class="row">
-  <div class="text">
-    <h3>1) Make a Commit (Save your work with a message)</h3>
-    <p>In <strong>GitHub Desktop</strong>:</p>
-    <ul>
-      <li>Select the files you changed (left sidebar).</li>
-      <li>Write a clear commit summary (e.g., <span class="mono">Finish Unit 1 variables exercise</span>).</li>
-      <li>Optionally add a description (what you changed and why).</li>
-      <li>Click <span class="mono">Commit to main</span> (or your current branch).</li>
-    </ul>
-    <div class="note">Commit early and often — small commits make it easier to undo mistakes and review your progress.</div>
-  </div>
-  <div class="media">
-    <a href="assets/commit-push/slide15_img01.png" target="_blank" rel="noopener">
-      <img src="assets/commit-push/slide15_img01.png" alt="GitHub Desktop: Push origin" />
-    </a>
-  </div>
-</div>
 
-<div class="row alt">
-  <div class="text">
-    <h3>2) Push your commits to GitHub</h3>
-    <p>After committing locally, click <span class="mono">Push origin</span> in GitHub Desktop to upload your changes to GitHub.com.</p>
-    <p>This publishes your work so mentors can see it and you can access it from any computer.</p>
-  </div>
-  <div class="media">
-    <a href="assets/commit-push/slide15_img01.png" target="_blank" rel="noopener">
-      <img src="assets/commit-push/slide15_img01.png" alt="GitHub Desktop: Push origin" />
-    </a>
-  </div>
-</div>
+        <div class="row">
+          <div class="text">
+            <h3>1) Make a Commit (Save your work with a message)</h3>
+            <p>In <strong>GitHub Desktop</strong>:</p>
+            <ul>
+              <li>Select the files you changed (left sidebar).</li>
+              <li>Write a clear commit summary (e.g., <span class="mono">Finish Unit 1 variables exercise</span>).</li>
+              <li>Optionally add a description (what you changed and why).</li>
+              <li>Click <span class="mono">Commit to main</span> (or your current branch).</li>
+            </ul>
+            <div class="note">Commit early and often — small commits make it easier to undo mistakes and review your
+              progress.</div>
+          </div>
+          <div class="media">
+            <a href="assets/commit-push/slide15_img01.png" target="_blank" rel="noopener">
+              <img src="assets/commit-push/slide15_img01.png" alt="GitHub Desktop: Push origin" />
+            </a>
+          </div>
+        </div>
 
-<div class="row">
-  <div class="text">
-    <h3>3) Confirm on GitHub & keep in sync</h3>
-    <ul>
-      <li>Visit your repository on GitHub.com — you should see your new commits.</li>
-      <li>If you switch computers later, use <span class="mono">Fetch origin</span> and <span class="mono">Pull</span> in GitHub Desktop to get the latest changes.</li>
-      <li>Repeat the cycle: <strong>Edit → Commit → Push</strong>.</li>
-    </ul>
-    <div class="note"><strong>Common gotchas:</strong> Don’t forget to select the right files before committing, and remember that <em>committing is local</em> until you <em>push</em>.</div>
-  </div>
-  <div class="media">
-    <a href="assets/commit-push/slide16_img01.png" target="_blank" rel="noopener">
-      <img src="assets/commit-push/slide16_img01.png" alt="GitHub Desktop: Sync / Fetch / Pull confirmation" />
-    </a>
-  </div>
-</div>
+        <div class="row alt">
+          <div class="text">
+            <h3>2) Push your commits to GitHub</h3>
+            <p>After committing locally, click <span class="mono">Push origin</span> in GitHub Desktop to upload your
+              changes to GitHub.com.</p>
+            <p>This publishes your work so mentors can see it and you can access it from any computer.</p>
+          </div>
+          <div class="media">
+            <a href="assets/commit-push/slide15_img01.png" target="_blank" rel="noopener">
+              <img src="assets/commit-push/slide15_img01.png" alt="GitHub Desktop: Push origin" />
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="text">
+            <h3>3) Confirm on GitHub & keep in sync</h3>
+            <ul>
+              <li>Visit your repository on GitHub.com — you should see your new commits.</li>
+              <li>If you switch computers later, use <span class="mono">Fetch origin</span> and <span
+                  class="mono">Pull</span> in GitHub Desktop to get the latest changes.</li>
+              <li>Repeat the cycle: <strong>Edit → Commit → Push</strong>.</li>
+            </ul>
+            <div class="note"><strong>Common gotchas:</strong> Don’t forget to select the right files before committing,
+              and remember that <em>committing is local</em> until you <em>push</em>.</div>
+          </div>
+          <div class="media">
+            <a href="assets/commit-push/slide16_img01.png" target="_blank" rel="noopener">
+              <img src="assets/commit-push/slide16_img01.png" alt="GitHub Desktop: Sync / Fetch / Pull confirmation" />
+            </a>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -109,8 +259,9 @@
 
   <footer>
     <div class="wrap">
-            <p>© 2025 Josephine Bolotski</p>
+      <p>© 2025 Josephine Bolotski</p>
     </div>
   </footer>
 </body>
+
 </html>
